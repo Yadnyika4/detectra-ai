@@ -1,4 +1,4 @@
-# 🛡️ Detectra AI — Offline Intelligent Network Diagnostic Assistant
+# 🔍 Detectra AI — Offline Intelligent Network Diagnostic Assistant
 
 An offline AI/ML system that monitors your local network, detects abnormal
 behaviour with an Isolation Forest model, diagnoses the probable problem
