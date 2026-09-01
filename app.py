@@ -401,7 +401,7 @@ hr {
    DASHBOARD HEADER
    ========================================================== */
 
-.netguard-main-title {
+.detectra-main-title {
 
     font-size:
         34px;
@@ -417,7 +417,7 @@ hr {
 }
 
 
-.netguard-subtitle {
+.detectra-subtitle {
 
     margin-top:
         1px;
@@ -961,7 +961,7 @@ def render_network_topology(metrics, result):
         status_color = "#ff5268"
 
     topology_html = """
-    <div id="netguard-scene">
+    <div id="detectra-scene">
 
         <div class="scene-title">
             <span>NETWORK TOPOLOGY</span>
@@ -1035,7 +1035,7 @@ def render_network_topology(metrics, result):
         font-family: "Segoe UI", sans-serif;
     }
 
-    #netguard-scene {
+    #detectra-scene {
         height: 400px;
         position: relative;
         overflow: hidden;
@@ -1280,7 +1280,7 @@ def render_network_topology(metrics, result):
     <script>
 
     const scene =
-        document.getElementById("netguard-scene");
+        document.getElementById("detectra-scene");
 
     const layer =
         document.getElementById("topology-layer");
@@ -1954,7 +1954,7 @@ def page_ai_diagnosis():
 
         st.markdown(
             """
-NetGuard combines two deterministic signals:
+detectra combines two deterministic signals:
 
 1. **Rule evidence strength — 60%**
 2. **Isolation Forest ML agreement — 40%**

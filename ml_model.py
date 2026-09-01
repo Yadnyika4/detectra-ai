@@ -108,7 +108,7 @@ def generate_synthetic_training_data(n_samples: int = None, save: bool = True) -
 # ---------------------------------------------------------------------------
 # Model wrapper
 # ---------------------------------------------------------------------------
-class NetGuardMLModel:
+class detectraMLModel:
     """Wraps a StandardScaler + IsolationForest pair with train/save/load/predict."""
 
     def __init__(self):
@@ -222,10 +222,10 @@ class NetGuardMLModel:
 _singleton_model = None
 
 
-def get_model() -> NetGuardMLModel:
+def get_model() -> detectraMLModel:
     """Return a process-wide cached, trained/loaded model instance."""
     global _singleton_model
     if _singleton_model is None:
-        _singleton_model = NetGuardMLModel()
+        _singleton_model = detectraMLModel()
         _singleton_model.load_or_train()
     return _singleton_model

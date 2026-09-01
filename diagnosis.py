@@ -526,7 +526,7 @@ def run_diagnosis(
     model=None,
 ) -> dict:
     """
-    Complete NetGuard AI diagnosis pipeline:
+    Complete detectra AI diagnosis pipeline:
 
     Network metrics
         ↓

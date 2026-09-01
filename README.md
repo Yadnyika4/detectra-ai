@@ -84,8 +84,8 @@ This is **deterministic** — never a random number.
 
 ### Step 3 — Get the project onto your machine
 - If you received a ZIP: right-click it → **Extract All** → choose a folder
-  (e.g. `C:\Users\<you>\Documents\netguard_ai`).
-- In VS Code: **File → Open Folder…** → select the extracted `netguard_ai` folder.
+  (e.g. `C:\Users\<you>\Documents\detectra_ai`).
+- In VS Code: **File → Open Folder…** → select the extracted `detectra_ai` folder.
 
 ### Step 4 — Open a terminal in VS Code
 - Menu: **Terminal → New Terminal** (opens PowerShell/Command Prompt at the
@@ -185,15 +185,15 @@ see the Testing section notes in this repo's commit history.)*
 ```
 git init
 git add .
-git commit -m "Initial commit: NetGuard AI offline network diagnostic assistant"
+git commit -m "Initial commit: detectra AI offline network diagnostic assistant"
 ```
 
 Then on GitHub.com:
-1. Click **New repository**, name it `netguard-ai`, leave it empty (no README/gitignore — you already have them), click **Create repository**.
+1. Click **New repository**, name it `detectra-ai`, leave it empty (no README/gitignore — you already have them), click **Create repository**.
 2. Copy the commands GitHub shows under "…or push an existing repository from the command line", or run:
 ```
 git branch -M main
-git remote add origin https://github.com/<your-username>/netguard-ai.git
+git remote add origin https://github.com/<your-username>/detectra-ai.git
 git push -u origin main
 ```
 
@@ -278,7 +278,7 @@ machine (privacy).
 A: Rules check each metric independently against fixed thresholds (fast,
 transparent, but blind to novel combinations). The Isolation Forest looks
 at all 6 features together and flags statistically unusual combinations
-even if no single metric crosses a hard threshold. NetGuard combines both:
+even if no single metric crosses a hard threshold. detectra combines both:
 rules choose the specific diagnosis label (so it's always explainable),
 while the ML model contributes anomaly strength as supporting evidence and
 a confidence input.
@@ -322,4 +322,4 @@ Mode measures the cloud server, not the visitor's own machine.
 - 100% local processing — no OpenAI, Gemini, or other cloud AI API is used or required.
 - Metrics are collected locally via `psutil` and the OS ping command.
 - The Isolation Forest model runs locally via scikit-learn.
-- Diagnostic history is stored in a local SQLite file (`database/netguard.db`) that never leaves the machine unless you choose to share it.
+- Diagnostic history is stored in a local SQLite file (`database/detectra.db`) that never leaves the machine unless you choose to share it.

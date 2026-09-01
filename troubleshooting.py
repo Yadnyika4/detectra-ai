@@ -113,7 +113,7 @@ KNOWLEDGE_BASE = {
 # Offline "assistant"
 # ---------------------------------------------------------------------------
 DISCLAIMER = (
-    "NetGuard's assistant is an **offline, rule-based diagnostic helper** - "
+    "detectra's assistant is an **offline, rule-based diagnostic helper** - "
     "it looks answers up from a local knowledge base and your current "
     "diagnosis. It is not a cloud generative AI model and has no internet "
     "connection to any external service."

@@ -22,7 +22,7 @@ DATABASE_DIR = os.path.join(BASE_DIR, "database")
 for _dir in (DATA_DIR, MODELS_DIR, DATABASE_DIR):
     os.makedirs(_dir, exist_ok=True)
 
-DB_PATH = os.path.join(DATABASE_DIR, "netguard.db")
+DB_PATH = os.path.join(DATABASE_DIR, "detectra.db")
 MODEL_PATH = os.path.join(MODELS_DIR, "isolation_forest.joblib")
 SCALER_PATH = os.path.join(MODELS_DIR, "scaler.joblib")
 TRAINING_DATA_PATH = os.path.join(DATA_DIR, "synthetic_training_data.csv")
@@ -46,7 +46,7 @@ IO_SAMPLE_INTERVAL_S = 1.0
 
 # Assumed local link capacity used only to turn raw throughput (Mbps) into a
 # 0-100% "network usage" estimate. This is a simplification that is clearly
-# documented for judges: NetGuard does not know your ISP plan, so it assumes
+# documented for judges: detectra does not know your ISP plan, so it assumes
 # a typical broadband/Wi-Fi capacity unless the user changes it.
 ASSUMED_BANDWIDTH_MBPS = 10.0
 
@@ -72,7 +72,7 @@ N_SYNTHETIC_SAMPLES = 3000
 # ---------------------------------------------------------------------------
 # Diagnostic rule thresholds
 # ---------------------------------------------------------------------------
-# These thresholds are the "explainable" half of the system: NetGuard never
+# These thresholds are the "explainable" half of the system: detectra never
 # lets the ML model make a decision the rules can't justify with real numbers.
 THRESHOLDS = {
     "latency_warning_ms": 80,
