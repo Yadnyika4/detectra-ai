@@ -8,7 +8,7 @@ Modern cyber-network dashboard with interactive 3D topology.
 from datetime import datetime
 from textwrap import dedent
 import html
-
+import os
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
@@ -20,7 +20,7 @@ import diagnosis
 import ml_model
 import network_monitor
 import troubleshooting
-
+is_local = st.context.url.startswith("http://localhost") or st.context.url.startswith("http://127.0.0.1")
 
 # ============================================================
 # PAGE CONFIG
@@ -884,11 +884,20 @@ with st.sidebar:
 
 
     else:
-      st.info(
-        "☁️ Live local network monitoring is unavailable on the cloud deployment. "
-        "Enable Demo Mode to test network scenarios, or run Detectra AI locally "
-        "to monitor your actual laptop network."
-    )
+       if is_local:
+         if st.button(
+            "▶ Run Real Diagnostic",
+            width="stretch",
+            type="primary"
+        ):
+            with st.spinner("Collecting live network data..."):
+                run_real_diagnostic()
+       else:
+        st.info(
+            "☁️ Live local network monitoring is unavailable on the cloud deployment. "
+            "Enable Demo Mode to test network scenarios, or run Detectra AI locally "
+            "to monitor your actual laptop network."
+        )
 
    
            
