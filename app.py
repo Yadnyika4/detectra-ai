@@ -884,20 +884,21 @@ with st.sidebar:
 
 
     else:
+      st.info(
+        "☁️ Live local network monitoring is unavailable on the cloud deployment. "
+        "Enable Demo Mode to test network scenarios, or run Detectra AI locally "
+        "to monitor your actual laptop network."
+    )
 
-        if st.button(
-            "▶ Run Real Diagnostic",
-            width="stretch",
-            type="primary"
-        ):
+    if st.button(
+        "▶ Run Real Diagnostic",
+        width="stretch",
+        type="primary",
+        disabled=True
+    ):
+        pass
 
-            with st.spinner(
-                "Collecting live network metrics..."
-            ):
-
-                run_real_diagnostic()
-
-            st.rerun()
+           
 
 
     st.divider()
