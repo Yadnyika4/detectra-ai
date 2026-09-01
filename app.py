@@ -1394,12 +1394,18 @@ def page_dashboard():
 
     if metrics is None or result is None:
 
-        st.info(
-            "👈 Run a Real Diagnostic or Demo Diagnostic "
-            "from the sidebar to start monitoring."
+        if is_local:
+             st.info(
+               "👉 Run a Real Diagnostic or Demo Diagnostic "
+               "from the sidebar to start monitoring."
         )
+        else:
+         st.info(
+              "👉 Enable Demo Mode and run a Demo Diagnostic "
+              "from the sidebar to start monitoring."
+               )
 
-        return
+         return
 
     # ========================================================
     # VALUES
