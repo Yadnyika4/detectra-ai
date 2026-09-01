@@ -890,14 +890,7 @@ with st.sidebar:
         "to monitor your actual laptop network."
     )
 
-    if st.button(
-        "▶ Run Real Diagnostic",
-        width="stretch",
-        type="primary",
-        disabled=True
-    ):
-        pass
-
+   
            
 
 
