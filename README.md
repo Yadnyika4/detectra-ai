@@ -1,4 +1,4 @@
-# 🛡️ NetGuard AI — Offline Intelligent Network Diagnostic Assistant
+# 🛡️ Detectra AI — Offline Intelligent Network Diagnostic Assistant
 
 An offline AI/ML system that monitors your local network, detects abnormal
 behaviour with an Isolation Forest model, diagnoses the probable problem
@@ -10,7 +10,7 @@ fixes — **without any cloud AI API**.
 ## 1. Project structure
 
 ```
-netguard_ai/
+Detectra_ai/
 ├── app.py                # Streamlit dashboard (entry point)
 ├── network_monitor.py    # Collects real metrics (psutil + ping)
 ├── ml_model.py            # Isolation Forest training/inference
@@ -23,7 +23,7 @@ netguard_ai/
 ├── .gitignore
 ├── data/                  # synthetic_training_data.csv (auto-generated)
 ├── models/                # isolation_forest.joblib, scaler.joblib (auto-generated)
-└── database/               # netguard.db (auto-created on first run)
+└── database/               # Detectra.db (auto-created on first run)
 ```
 
 ---
@@ -89,7 +89,7 @@ This is **deterministic** — never a random number.
 
 ### Step 4 — Open a terminal in VS Code
 - Menu: **Terminal → New Terminal** (opens PowerShell/Command Prompt at the
-  project root — you should see `netguard_ai>` as the prompt).
+  project root — you should see `Detectra_ai>` as the prompt).
 
 ### Step 5 — Create a virtual environment
 ```
